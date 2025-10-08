@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDK EVENTS MANAGEMENT SERVICES - Under Maintenance</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 600px;
+            padding: 40px 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        .logo {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 30px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .maintenance-icon {
+            font-size: 4rem;
+            margin: 30px 0;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .message {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+
+        .contact-info {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 30px 0;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 15px 0;
+            font-size: 1rem;
+        }
+
+        .contact-icon {
+            margin-right: 15px;
+            font-size: 1.2rem;
+        }
+
+        .contact-link {
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .contact-link:hover {
+            color: #ffd700;
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+        }
+
+        .social-links {
+            margin-top: 30px;
+        }
+
+        .social-links h3 {
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .social-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: white;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .social-icon:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .facebook { background: #1877f2; }
+        .instagram { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
+        .youtube { background: #ff0000; }
+
+        .footer {
+            margin-top: 40px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        .animated-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: linear-gradient(-45deg, #667eea, #764ba2, #f093fb, #f5576c);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 20px;
+                padding: 30px 20px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .subtitle {
+                font-size: 1rem;
+            }
+            
+            .contact-item {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="animated-bg"></div>
+    
+    <div class="container">
+        <div class="logo">
+            <img src="/android-chrome-192x192.png" alt="IDK Events Logo" style="width: 100%; height: 100%; object-fit: contain;">
+        </div>
+        
+        <h1>IDK EVENTS MANAGEMENT SERVICES</h1>
+        <p class="subtitle">Under Maintenance</p>
+        
+        <div class="maintenance-icon">🔧</div>
+        
+        <div class="message">
+            We're currently performing scheduled maintenance to improve our services. 
+            Our website will be back online soon. Thank you for your patience!
+        </div>
+        
+        <div class="contact-info">
+            <h3 style="margin-bottom: 20px; font-size: 1.3rem;">📞 Contact Us Directly</h3>
+            
+            <div class="contact-item">
+                <span class="contact-icon">📱</span>
+                <a href="tel:09218628527" class="contact-link">0921-862-8527</a>
+            </div>
+            
+            <div class="contact-item">
+                <span class="contact-icon">📧</span>
+                <a href="mailto:idkeventsmanagement@gmail.com" class="contact-link">idkeventsmanagement@gmail.com</a>
+            </div>
+            
+            <div class="contact-item">
+                <span class="contact-icon">📍</span>
+                <span>Victoria Station 1 Edsa Kamuning<br>Brgy. South Triangle, Quezon City</span>
+            </div>
+        </div>
+        
+        <div class="social-links">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/idkeventsmanagementservices" target="_blank" class="social-icon facebook">
+                    📘
+                </a>
+                <a href="https://www.instagram.com/idkeventsmanagementservices" target="_blank" class="social-icon instagram">
+                    📷
+                </a>
+                <a href="https://www.youtube.com/@idkeventsmanagementservice4523" target="_blank" class="social-icon youtube">
+                    📺
+                </a>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p><strong>"We don't just make events, We bring good memories"</strong></p>
+            <p style="margin-top: 10px;">Led by Mr. Irish Dominic Kintanar (IDK) aka Papa Carlo</p>
+            <p style="margin-top: 15px; font-size: 0.8rem;">© 2024 IDK EVENTS MANAGEMENT SERVICES. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>
