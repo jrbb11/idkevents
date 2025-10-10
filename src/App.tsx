@@ -132,7 +132,7 @@ function App() {
         <div className="absolute inset-0 bg-black opacity-40"></div>
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 animate-fade-in">
-            No 1 Event Organizer in Philippines
+            No. 1 Event Organizer in the Philippines
           </h1>
           <p className="text-xl md:text-2xl text-white mb-8">
             We don't just make events, We bring good memories
