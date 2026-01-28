@@ -31,26 +31,26 @@ function App() {
   ]
 
   const eventHighlights = {
-    id: 'hmtRLFDfKEw',
+    id: 'ABPxxPp9TiA',
     title: 'Event Highlights',
-    url: 'https://www.youtube.com/watch?v=hmtRLFDfKEw'
+    url: 'https://www.youtube.com/watch?v=ABPxxPp9TiA'
   }
 
   const videos = [
-    { 
-      id: 'YbP-v8GsjgM', 
+    {
+      id: 'YbP-v8GsjgM',
       title: 'SCD AMBASSADOR LAUNCHING - AZ MARTINEZ',
       url: 'https://www.youtube.com/watch?v=YbP-v8GsjgM'
     },
-    { 
-      id: 'ZD5hqywqa-c', 
+    {
+      id: 'ZD5hqywqa-c',
       title: 'Asinan Music and Arts Festival 2025 with Mayonnaise, Kleggy, Libranda & Sowhunly (Umingan Pangasinan)',
       url: 'https://www.youtube.com/watch?v=ZD5hqywqa-c'
     },
-    { 
-      id: '8fRnNVeSsq0', 
+    {
+      id: 'ABPxxPp9TiA',
       title: '9th Kanlahi Music Festival 2025 | IDK Events Management',
-      url: 'https://www.youtube.com/watch?v=8fRnNVeSsq0'
+      url: 'https://www.youtube.com/watch?v=ABPxxPp9TiA'
     },
   ]
 
@@ -69,9 +69,9 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             <div className="flex-shrink-0 flex items-center gap-3">
-              <img 
-                src="/android-chrome-192x192.png" 
-                alt="IDK Events Management Logo" 
+              <img
+                src="/android-chrome-192x192.png"
+                alt="IDK Events Management Logo"
                 className="h-12 w-12 object-contain"
               />
               <div className="flex flex-col">
@@ -88,9 +88,8 @@ function App() {
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}
-                  className={`transition-colors hover:text-purple-600 font-medium ${
-                    isScrolled ? 'text-gray-800' : 'text-white'
-                  }`}
+                  className={`transition-colors hover:text-purple-600 font-medium ${isScrolled ? 'text-gray-800' : 'text-white'
+                    }`}
                 >
                   {item}
                 </button>
@@ -128,13 +127,26 @@ function App() {
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="relative h-screen flex items-center justify-center bg-gradient-to-br from-purple-600 via-pink-500 to-red-500">
-        <div className="absolute inset-0 bg-black opacity-40"></div>
+      <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
+        {/* Video Background */}
+        <div className="absolute inset-0 w-full h-full">
+          <iframe
+            className="absolute top-1/2 left-1/2 w-[300%] h-[300%] -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+            src={`https://www.youtube.com/embed/${eventHighlights.id}?autoplay=1&mute=1&loop=1&playlist=${eventHighlights.id}&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&enablejsapi=1`}
+            title="Hero Background Video"
+            allow="autoplay; encrypted-media"
+            style={{ border: 'none' }}
+          ></iframe>
+        </div>
+        {/* Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-600/70 via-pink-500/60 to-red-500/70"></div>
+        {/* Dark Overlay for better text readability */}
+        <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 animate-fade-in">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 animate-fade-in drop-shadow-2xl">
             No. 1 Event Organizer in the Philippines
           </h1>
-          <p className="text-xl md:text-2xl text-white mb-8">
+          <p className="text-xl md:text-2xl text-white mb-8 drop-shadow-lg">
             We don't just make events, We bring good memories
           </p>
           <button
@@ -144,7 +156,7 @@ function App() {
             Get Started
           </button>
         </div>
-        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce z-10">
           <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center">
             <div className="w-1 h-3 bg-white rounded-full mt-2"></div>
           </div>
@@ -227,8 +239,8 @@ function App() {
               >
                 <div className="h-64 bg-gradient-to-br from-purple-400 to-pink-400 flex items-center justify-center overflow-hidden">
                   {artist.image ? (
-                    <img 
-                      src={artist.image} 
+                    <img
+                      src={artist.image}
                       alt={artist.name}
                       className="w-full h-full object-contain"
                     />
@@ -435,7 +447,7 @@ function App() {
                   </div>
                   <div className="flex items-start gap-4">
                     <FaMapMarkerAlt className="text-purple-600 text-xl mt-1" />
-      <div>
+                    <div>
                       <h4 className="font-bold text-gray-900">Location</h4>
                       <p className="text-gray-600">Victoria Station 1 Edsa Kamuning<br />Brgy. South Triangle, Quezon City</p>
                     </div>
@@ -469,8 +481,8 @@ function App() {
                     className="w-12 h-12 bg-red-600 text-white rounded-full flex items-center justify-center hover:bg-red-700 transition-colors"
                   >
                     <FaYoutube size={20} />
-        </a>
-      </div>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -482,9 +494,9 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col items-center text-center">
             <div className="flex items-center gap-3 mb-4">
-              <img 
-                src="/android-chrome-192x192.png" 
-                alt="IDK Events Management Logo" 
+              <img
+                src="/android-chrome-192x192.png"
+                alt="IDK Events Management Logo"
                 className="h-16 w-16 object-contain"
               />
               <h2 className="text-2xl font-bold text-white">IDK EVENTS MANAGEMENT SERVICES</h2>
@@ -494,8 +506,8 @@ function App() {
             </p>
             <p className="text-gray-500">
               Led by Mr. Irish Dominic Kintanar (IDK) aka Papa Carlo
-        </p>
-      </div>
+            </p>
+          </div>
         </div>
       </footer>
     </div>
